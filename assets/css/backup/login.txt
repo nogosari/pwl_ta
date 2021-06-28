@@ -1,0 +1,85 @@
+<?php
+session_start();
+
+if (isset($_SESSION['id'], $_SESSION['nama'])) {
+  header('Location: index.php');
+}
+?>
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <title>Jadwal Kalender ku</title>
+    <!--<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">--!>
+    <!--<link rel="stylesheet" href="assets/jqueryui/css/jquery-ui.min.css">--!>
+	<link rel="stylesheet" href="assets/css/style.css">
+
+
+  </head>
+  <body>
+   	 <div class="container">
+               <h3> <div class="text-center">
+                  <strong>Login to Your Account</strong>
+                </div>
+              </h3>
+               <form action="login.php" method="post">
+                <input type="hidden" name="mode" value="login">
+                <?php
+                if (isset($_SESSION['error'])) {
+                  echo '
+                    <div class="alert alert-danger" role="alert">
+                      '.$_SESSION['error'].'
+                    </div>
+                  ';
+                }
+                ?>
+                <div class="form-input">
+                   <input type="text" class="form-control" name="name" placeholder="ID_name">
+                 </div>
+                <div class="form-input">
+                  <input type="password" class="form-control" name="password" placeholder="Password">
+                </div>
+                <div class="form-group">
+                  <button type="submit" class="btn-login" name="login">LOGIN</button>
+                </div>
+              </form>
+            
+		</div>
+<br>
+<a href="admin_new.php" class="btn-create">Create ID here, if you don't have any ID</a>
+
+            <div class="panel-footer">
+              <div class="text-right">
+                &copy; UJIAN IP
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/jqueryui/js/jquery-ui.min.js"></script>
+  </body>
+</html>
+
+<?php
+// Form handler, executed if user click LOGIN button
+if (isset($_POST['login'])) {
+  require_once 'classes/admin.php';
+
+  $admin = new Admin();
+
+  $data = array(
+    'name' => $_POST['name'],
+    'password' => $_POST['password']
+  );
+
+  $resp = $admin->login($data);
+  $resp = json_decode($resp);
+
+  if ($resp->status) {
+    header('Location: index.php');
+  } else {
+    header('Location: login.php');
+  }
+}
+?>

@@ -1,0 +1,47 @@
+Program ini menggunakan Database bernama Jadwal.sql yanng berisi 2 Data Tabel yaitu " admin " dan " kegiatan "
+
+didalam tabel admin,
+id_admin digunakan sebagai PK untuk disambungkan ke tabel kegiatan
+
+didalam tabel kegiatan,
+nomer digunakan sebagai PK untuk mengetahui urutan jadwal yang nantinya bisa kita hapus melalui nomer
+juga terdapat id_admin sebagai FK dari tabel admin
+
+=================================================
+
+didalam folder classes. terdapat 3 file:
+admin.php, connection.php, jadwal.php
+
+admin.php berisi koding fungsi-fungsi antara lain login, logout, insert
+jadwal.php berisi koding fungsi-fungsi antara lain menampilkan data, delete, insert
+connection.php berfungsi untuk menyambungkan admin.php ke jadwal.php
+
+=================================================
+
+Langkah-Langkah jalananya program :
+1. Ketika membuka /Localhost/LastProject
+otomatis kita akan masuk kedalam halaman Login, ketika kita belum punya sebuah account, kita harus Sign Up dulu
+ketika klik tombol Sign Up di halaman Login (menuju admin_new.php) , maka kita akan diminta untuk mengisi:
+username, email, password, confirm password
+setelah mengisi semua dan kita submit (data akan ditampung dalam proses admin_save.php) maka kita dialokasikan lagi ke halaman Login. 
+
+2. Sesudah kita Sign Up, otomatis data tadi akan disimpan, dan saat Login, kita langsung saja masukkan username dan password (data username dan password akan dicocokan dengan yang di database, jika salah akan kembali ke halaman Login)
+setelah itu kita akan berhasil Login, akan dialokasikan kedalam Index
+
+3. Halaman Index terdapat List Schedule, Add Schedule, Logout
+dan sekarang kita akan mencoba membuat sebuah jadwal
+Klik Add Schedule, otomatis akan dialokasikan ke jadwal_new.php
+di menu ini, kita diminta untuk menginput data Tanggal, Jam, dan Keterangan
+ketika sudah mengisi semuanya dengan format yang sudah diminta dengan benar, maka 3 data tersebut akan di simpan oleh jadwal_save.php
+ketika klik Submit, kita akan dialokasikan ke List Schedule (jadwal_list.php)
+
+4. Di halaman List Schedule terdapat
+No, Date, Time, Schedule, Options
+Nomor disini adalah auto_increment dari jadwal yang sudah kita buat tadi
+sedangkan Date, Time, Schedule adalah hasil display dari data Add Schedule sebelumnya
+dan Options disini terdapat tombol Delete untuk menghapus schedule tersebut
+ketika kita klik Delete, maka jadwal_delete.php akan memproses menghapus sesuai nomer jadwal (Prrimary Key)
+dan akan dialokasikan lagi ke halaman List Schedule
+
+5. Yang terakhir Logout, hanya session_unset dan session_destroy untuk keluar dari user tersebut
+dan akan dialokasikan ke halaman Login lagi
