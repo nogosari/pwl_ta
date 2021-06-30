@@ -3,8 +3,8 @@ class Connection
 {
   private $host = 'localhost';
   private $db = 'jadwal';
-  private $user = 'root';
-  private $pass = '';
+  private $user = 'nogosari';
+  private $pass = 'ASDQ739g((&';
 
   private $pdo = null;
 
