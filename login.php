@@ -14,7 +14,7 @@ if (isset($_SESSION['id'], $_SESSION['nama'])) {
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Home</title>
+  <title>Homes</title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
 
