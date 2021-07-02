@@ -60,7 +60,7 @@
     <div class="container" data-aos="fade-up">
       <div class="section-title">
         <br>
-        <h2>Profil Singkat</h2>
+        <h2>Profil Singkat Jolali</h2>
       </div>
     <div class="container" data-aos="fade-up">
       <div class="row">
