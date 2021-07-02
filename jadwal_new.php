@@ -121,7 +121,7 @@
 	    
       <div class="panel-footer">
       <div class="text-right">
-         <!-- <br> &copy; Gustaf Sebastian - 15.K1.0018 -->
+         <!--  -->
       </div>
     </div>
     </div>

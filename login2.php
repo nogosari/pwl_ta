@@ -8,7 +8,7 @@ if (isset($_SESSION['id'], $_SESSION['nama'])) {
 <!DOCTYPE html>
 <html lang="id">
   <head>
-    <title>Gustaf Sebastian's Web</title>
+    <title> Test Web</title>
     <!--<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">--!>
     <!--<link rel="stylesheet" href="assets/jqueryui/css/jquery-ui.min.css">--!>
 	<link rel="stylesheet" href="assets/css/style.css">
