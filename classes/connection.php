@@ -4,7 +4,7 @@ class Connection
   private $host = 'localhost';
   private $db = 'jadwal';
   private $user = 'nogosari';
-  private $pass = 'mend';
+  private $pass = '';
 
   private $pdo = null;
 
