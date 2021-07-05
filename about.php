@@ -42,11 +42,6 @@
         <ul>
           <li><a href="index.php">Home</a></li>
           <li class="active"><a href="about.php">About</a></li>
-          <!-- <li><a href="portofolio.html">Portofolio</a></li> -->
-          <!-- <li><a href="experience.html">Experience</a></li> -->
-          <!-- <li><a href="skill.html">Skill</a></li> -->
-          <!-- <li><a href="kampus.html">Kampus</a></li> -->
-          <!-- <li><a href="galeri.html">Galeri</a></li> -->
         </ul>
       </nav><!-- .nav-menu -->
 
@@ -60,7 +55,7 @@
     <div class="container" data-aos="fade-up">
       <div class="section-title">
         <br>
-        <h2>Profil Singkat</h2>
+        <h2>About Jolali</h2>
       </div>
     <div class="container" data-aos="fade-up">
       <div class="row">
@@ -69,25 +64,24 @@
         </div>
 
         <div class="col-lg-6 pt-3 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
-          <h4>Berikut profil singkat saya</h4>
-          <br>
-          <!-- <p class="font-italic">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua.
-          </p> -->
+          <h4>~ Catat Jadwalmu, Nikmati Hidupmu</h4>
+          <p class="font-italic">
+            Jolali adalah sebuah aplikasi yang bertujuan untuk memudahkan kehidupan manusia, khususnya dalam penjadwalan kehidupan sehari-hari. 
+            Harapannya, aplikasi ini bisa berguna jika dalam kehidupan sehari-hari anda sering melupakan banyak jadwal.
+          </p>
           <ul>
             <li><i class="ri-quill-pen-fill"></i>Harits Jauza Fathifaldi</li>
-            <li><i class="ri-markup-fill"></i>Semarang, 21 Desember 1998</li>
+            <li><i class="ri-markup-fill"></i>Sydney, 31 Februari 2000</li>
             <li><i class="ri-men-line"></i> Gender : Male</li>
             <li><i class="ri-book-mark-line"></i> Mahasiswa</li>
             <li><i class="ri-briefcase-fill"></i>Universitas Dian Nuswantoro</li>
             <li><i class="ri-save-line"></i> A11.2019.11745</li>
-            <li><i class="ri-home-8-fill"></i> Taman Puri Sartika C/51, Semarang</li>
+            <li><i class="ri-home-8-fill"></i> JL. Sesama Indah C/007, Semarang</li>
             
           </ul>
           <br>
           <p>
-            Perkenalkan, saya Harits Jauza Fathifaldi. Status saya saat ini adalah sebagai mahasiswa di Universitas Dian Nuswantoro Semarang. Mengambil program studi Teknik Informatika.
+            Harits Jauza Fathifaldi adalah mahasiswa di Universitas Dian Nuswantoro Semarang. Mengambil program studi Teknik Informatika di jenjang Strata Satu.
           </p>
         </div>
 

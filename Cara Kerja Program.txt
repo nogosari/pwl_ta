@@ -1,4 +1,4 @@
-Program ini menggunakan Database bernama Jadwal.sql yanng berisi 2 Data Tabel yaitu " admin " dan " kegiatan "
+Program ini menggunakan Database bernama Jolali.sql yanng berisi 2 Data Tabel yaitu " admin " dan " kegiatan "
 
 didalam tabel admin,
 id_admin digunakan sebagai PK untuk disambungkan ke tabel kegiatan

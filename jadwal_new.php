@@ -63,9 +63,6 @@
 
       <br><br>
 
-      <div class="container-login">
-      <!-- <div class="panel-heading"> -->
-      </div>
       
       <!-- START FORM -->
       <form name=new_jadwal onsubmit="return validateJadwal()" method="post" action="jadwal_save.php">

@@ -34,6 +34,7 @@ class Jadwal
               <td>'.$kegiatan['jam'].'</td>
               <td>'.$kegiatan['keterangan'].'</td>
               <td>
+                <a href="jadwal_edit.php?nomer='.$kegiatan['nomer'].'" class="btn btn-danger btn-xs" role="button">Edit</a>
                 <a href="jadwal_delete.php?nomer='.$kegiatan['nomer'].'" class="btn btn-danger btn-xs" role="button">Delete</a>
               </td>
             </tr>
@@ -102,6 +103,53 @@ class Jadwal
     setcookie('kegiatan', json_encode($resp), time() + 30);
   }
 
+  public function edit($id) {
+    // $id=$_SESSION['id'];
+    try {
+      $sql = "SELECT nomer, tanggal, jam, keterangan
+              FROM kegiatan
+              WHERE nomer = $id";
+
+      $stmt = $this->pdo->prepare($sql);
+      $stmt->execute();
+
+      $kegiatan = $stmt->fetchAll();
+
+      $resp = array(
+        'status' => true,
+        'data' => $kegiatan
+      );
+      
+    } catch (PDOException $e) {
+      $resp = array(
+        'status' => false,
+        'pesan' => $e->getMessage()
+      );
+    }
+
+    return ($resp);
+  }
+
+  public function update($nomer,$tanggal,$waktu,$keterangan)
+  {
+    try {
+      $sql = "UPDATE kegiatan SET tanggal='$tanggal',jam='$waktu',keterangan='$keterangan' WHERE nomer=$nomer";
+      $stmt = $this->pdo->prepare($sql);
+      $stmt->execute();
+
+      $resp = array(
+        'status' => true,
+        'pesan' => 'Update Successfuly'
+      );
+    } catch (PDOException $e) {
+      $resp = array(
+        'status' => false,
+        'pesan' => 'Update Failure<br>'.$e->getMessage()
+      );
+    }
+    return $resp;
+    // setcookie('kegiatan', json_encod e($resp), time() + 30);
+  }
 }
 ?>
 

@@ -104,16 +104,17 @@ if (isset($_SESSION['id'], $_SESSION['nama'])) {
           <div class="form-group row">
           <!-- <label for="sign-up" class="col-sm-2 col-form-label"></label> -->
           <div class="col-sm-8">
-            <button type="submit" class="btn btn-primary" name="cancel"><a href="index.php" class="btn-primary">Cancel</a></button>
+            <button type="submit" class="btn btn-primary" name="submit">Submit</button>
           </div>
           </div>
 
           <div class="form-group row">
           <!-- <label for="sign-up" class="col-sm-2 col-form-label"></label> -->
           <div class="col-sm-8">
-            <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+            <a href="index.php" class="btn-danger"><button type="submit" class="btn btn-danger" name="cancel">Cancel</button></a>
           </div>
           </div>
+
     </form>
 	    
       <div class="panel-footer">
